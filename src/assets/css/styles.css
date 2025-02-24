@@ -1,0 +1,669 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+  color: #333;
+  overflow-y: auto;
+}
+
+.container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* About */
+.about-section {
+  position: relative;
+  padding: 40px;
+  background: url("/public/images/background.jpg") no-repeat center center/cover;
+  color: black;
+  text-align: center;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+/* Add a semi-transparent overlay */
+.about-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.6); /* Adjust transparency (0 = fully transparent, 1 = solid) */
+  z-index: 1;
+}
+
+/* Ensure text and content are above the overlay */
+.about-section h1,
+.about-section p,
+.about-section h3,
+.skills-container {
+  position: relative;
+  z-index: 2;
+}
+
+
+
+.about-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.about-section h1,
+.about-section p,
+.about-section h3,
+.skills-container {
+  position: relative;
+  z-index: 2;
+}
+
+.about-section h1 {
+  color: maroon;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.skill-box {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  backdrop-filter: blur(5px);
+  transition: transform 0.3s ease-in-out;
+}
+
+.skill-box:hover {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.3);
+}
+/* About */
+
+.flipped-icon svg {
+  transform: scaleX(-1); /* Flips the icon horizontally */
+  height: 18px;
+}
+
+.sidebar {
+  width: 280px; /* Adjust sidebar width */
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh; /* Full height */
+  background: #fff;
+  padding: 20px;
+  text-align: center;
+  border-right: 1px solid #ddd;
+  overflow-y: auto; /* Enables scroll if content overflows */
+}
+
+.profile-pic {
+  width: 120px; /* Smaller profile pic */
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.artist-name {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.description {
+  font-size: 14px;
+  color: #555;
+  padding: 0 10px;
+  line-height: 1.5;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 15px 0;
+}
+
+.social-icons .icon {
+  font-size: 22px; /* Adjust size */
+  color: #666;
+  transition: color 0.3s ease;
+}
+
+.social-icons .icon:hover {
+  color: #000;
+}
+
+.message-btn {
+  background-color: transparent;
+  border: 1px solid black;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.message-btn:hover {
+  background: black;
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  padding-left: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-links li {
+  list-style: none;
+  margin: 10px 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+  color: #007bff;
+}
+
+.main-content {
+  margin-left: 28%;
+  width: 72%;
+  padding: 20px;
+}
+
+.navbar {
+  display: flex;
+  gap: 20px;
+  padding: 15px;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  width: 400px;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.name-fields {
+  display: flex;
+  gap: 10px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+}
+
+textarea {
+  height: 80px;
+}
+
+.captcha {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+}
+
+.message-btn {
+  background: white;
+  border: 1px solid black;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.social-icons a {
+  font-size: 20px;
+  color: black;
+  text-decoration: none;
+}
+
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  position: relative;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-image {
+  max-width: 80vw;
+  max-height: 80vh;
+  border-radius: 10px;
+}
+
+.close-btn,
+.prev-btn,
+.next-btn {
+  position: absolute;
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+}
+
+.close-btn {
+  top: 10px;
+  right: 15px;
+}
+
+.prev-btn {
+  left: 15px;
+}
+
+.next-btn {
+  right: 15px;
+}
+
+/* Common styles for buttons */
+.close-btn,
+.prev-btn,
+.next-btn {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.6); /* Dark transparent background */
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 50%;
+  transition: background 0.2s, transform 0.2s;
+}
+
+/* Add shadow to improve visibility on light backgrounds */
+.close-btn,
+.prev-btn,
+.next-btn {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Hover effect */
+.close-btn:hover,
+.prev-btn:hover,
+.next-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: scale(1.1);
+}
+
+/* Close Button (Top Right) */
+.close-btn {
+  top: 10px;
+  right: 15px;
+}
+
+/* Previous Button (Left Side) */
+.prev-btn {
+  left: 15px;
+  top: 50%;
+}
+
+/* Next Button (Right Side) */
+.next-btn {
+  right: 15px;
+  top: 50%;
+}
+
+/* Gallery images */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Dynamic grid */
+  gap: 10px;
+}
+
+
+.gallery img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.gallery-img {
+  width: 100%;
+  max-width: 250px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.gallery-img:hover {
+  transform: scale(1.05);
+}
+
+/* Popup container */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-img {
+  max-width: 90%;
+  max-height: 90vh;
+  border-radius: 10px;
+}
+
+/* Common styles for buttons */
+.close-btn,
+.prev-btn,
+.next-btn {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.6); /* Dark transparent background */
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 50%;
+  transition: background 0.2s, transform 0.2s;
+}
+
+/* Add shadow to improve visibility on light backgrounds */
+.close-btn,
+.prev-btn,
+.next-btn {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Hover effect */
+.close-btn:hover,
+.prev-btn:hover,
+.next-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: scale(1.1);
+}
+
+/* Close Button (Top Right) */
+.close-btn {
+  top: 10px;
+  right: 15px;
+}
+
+/* Previous Button (Left Side) */
+.prev-btn {
+  left: 15px;
+  top: 50%;
+
+}
+
+/* Next Button (Right Side) */
+.next-btn {
+  right: 15px;
+  top: 50%;
+
+}
+
+/* Make Sidebar Responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+/* Make Gallery Responsive */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  gap: 10px;
+}
+
+.gallery-img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+.gallery-img:hover {
+  transform: scale(1.05);
+}
+
+/* Make Popup Images Responsive */
+.modal-image {
+  max-width: 90vw;
+  max-height: 80vh;
+}
+
+/* Make Navigation Buttons Responsive */
+.close-btn, .prev-btn, .next-btn {
+  font-size: 20px;
+  padding: 8px;
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+  display: none; /* Hide by default */
+  cursor: pointer;
+  font-size: 24px;
+  padding: 10px;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+  margin-bottom: 15px;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #f4f4f4;
+  padding: 20px;
+  z-index: 999;
+  padding-top: 40px;
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+/* Content Container */
+.content-container {
+  margin-left: 250px; /* Default margin for large screens */
+  transition: margin-left 0.3s ease; /* Smooth transition */
+}
+
+@media (max-width: 1150px) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px; /* Reduced gap */
+  }
+
+  .gallery-img {
+    width: 100%; /* Ensure images take full space */
+  }
+  .content-container {
+    margin-left: 350px; /* Default margin for large screens */
+    transition: margin-left 0.3s ease; /* Smooth transition */
+  }
+
+  .content {
+    margin-left: 90px; /* Default margin for large screens */
+  }
+}
+
+@media (max-width: 1000px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px; /* Reduced gap */
+  }
+
+  .gallery-img {
+    width: 100%; /* Ensure images take full space */
+  }
+  .content-container {
+    margin-left: 350px; /* Default margin for large screens */
+    transition: margin-left 0.3s ease; /* Smooth transition */
+  }
+
+  .content {
+    margin-left: 90px; /* Default margin for large screens */
+  }
+}
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hamburger-menu {
+    display: block; /* Show hamburger menu on small screens */
+  }
+
+  .sidebar {
+    transform: translateX(-100%); /* Hide sidebar by default on small screens */
+  }
+
+  .sidebar.visible {
+    transform: translateX(0); /* Show sidebar when hamburger menu is clicked */
+  }
+
+  .content-container {
+    margin-left: 0; /* Remove margin when sidebar is hidden */
+  }
+
+  .content {
+    margin-left: 30px; /* Default margin for large screens */
+  }
+
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    height: auto; /* Allow height to expand */
+  }
+
+  .gallery-img {
+    width: 100%;
+    height: 250px; /* Increase height */
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 670px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    height: auto; /* Allow height to expand */
+  }
+
+  .gallery-image {
+    max-width: 90%; /* Ensure images fit within the container */
+  }
+}
+
+@media (max-width: 450px) {
+  .content {
+    margin-left: 10px; /* Default margin for large screens */
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column */
+    grid-template-rows: auto; /* Adjust height automatically */
+    justify-content: center; /* Center align */
+    align-items: center;
+    gap: 5px; /* Reduce gap */
+  }
+
+  .gallery img {
+    width: 90vw; /* 90% of the viewport width */
+    height: 90vw; /* Make it a square */
+    max-width: 300px; /* Set a max size */
+    max-height: 300px; /* Maintain square shape */
+    object-fit: cover; /* Ensure it covers the area */
+    border-radius: 10px; /* Keep rounded corners if needed */
+    margin: 0 auto; /* Center the image */
+  }
+}
+
+
