@@ -3,7 +3,7 @@ import Gallery from "../components/Gallery";
 
 const awards = Array.from({ length: 6 }, (_, i) => ({
   id: i + 1,
-  image: `/images/awards (${i + 1}).jpg`,
+  image: `/ganesh-portfolio/images/awards (${i + 1}).jpg`,
   title: `Award ${i + 1}`
 }));
 

@@ -8,7 +8,6 @@ import {
   FaEnvelope
 } from "react-icons/fa"; // Importing Font Awesome icons
 import "../assets/css/styles.css";
-import ContactForm from "./ContactForm";
 
 const Sidebar = () => {
   const [isSidebarVisible, setIsSidebarVisible] = useState(false);
@@ -30,7 +29,7 @@ const Sidebar = () => {
 
       {/* Sidebar */}
       <aside className={`sidebar ${isSidebarVisible ? "visible" : ""}`}>
-        <img src="/images/profile.jpg" alt="Artist" className="profile-pic" />
+        <img src="/ganesh-portfolio/images/profile.jpg" alt="Artist" className="profile-pic" />
         <h2 className="artist-name">GANESH CHAVAN</h2>
         <p className="description">
           Creative and skilled artist with 9 years of experience in crafting and

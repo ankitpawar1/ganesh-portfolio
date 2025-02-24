@@ -6,7 +6,7 @@ import Awards from "./pages/Awards";
 import "./assets/css/styles.css";
 
 const App = () => (
-  <Router>
+  <Router basename="/ganesh-portfolio">
     <div className="container">
       <Sidebar />
       <div className="main-content">
