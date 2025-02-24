@@ -614,6 +614,7 @@ textarea {
 
   .content {
     margin-left: 30px; /* Default margin for large screens */
+    margin-top: 50px;
   }
 
   .gallery {
@@ -630,6 +631,10 @@ textarea {
 }
 
 @media (max-width: 670px) {
+  .content {
+    margin-top: 50px;
+  }
+
   .gallery {
     grid-template-columns: repeat(2, 1fr);
     gap: 5px;
@@ -643,16 +648,21 @@ textarea {
 
 @media (max-width: 450px) {
   .content {
-    margin-left: 10px; /* Default margin for large screens */
+    margin-left: 0px; /* Default margin for large screens */
+    margin-top: 50px;
   }
 
   .gallery {
     display: grid;
-    grid-template-columns: 1fr; /* Single column */
+    grid-template-columns: 2fr; /* Single column */
     grid-template-rows: auto; /* Adjust height automatically */
     justify-content: center; /* Center align */
     align-items: center;
-    gap: 5px; /* Reduce gap */
+    gap: 10px; /* Reduce gap */
+  }
+
+  .gallery a {
+    margin: 0 auto;
   }
 
   .gallery img {
