@@ -3,7 +3,7 @@ import "../assets/css/styles.css";
 
 const About = () => (
   <section className="about-section">
-    <h1>ABOUT</h1>
+    <img src="/ganesh-portfolio/images/logo-background.jpeg" alt="logo" className="logo-img" />
     <p>
       A creative and skilled sculpture artist with nine years of experience in
       crafting three-dimensional artworks, proficient in working with clay,

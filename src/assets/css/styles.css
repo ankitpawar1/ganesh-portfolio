@@ -24,6 +24,19 @@ body {
   overflow: hidden;
 }
 
+.logo-img {
+  width: 100%;
+  max-width: 350px;
+  height: auto; /* Maintain aspect ratio */
+  cursor: pointer;
+  position: relative; /* Ensure z-index works */
+  z-index: 10; /* Higher value to keep it on top */
+  border-radius: 50%; /* Makes the image circular */
+  object-fit: cover; /* Ensures the image fits within the circle */
+}
+
+
+
 /* Add a semi-transparent overlay */
 .about-section::before {
   content: "";
@@ -35,6 +48,7 @@ body {
   background: rgba(255, 255, 255, 0.6); /* Adjust transparency (0 = fully transparent, 1 = solid) */
   z-index: 1;
 }
+
 
 /* Ensure text and content are above the overlay */
 .about-section h1,
