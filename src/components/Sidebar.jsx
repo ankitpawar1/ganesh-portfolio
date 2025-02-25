@@ -29,7 +29,7 @@ const Sidebar = () => {
 
       {/* Sidebar */}
       <aside className={`sidebar ${isSidebarVisible ? "visible" : ""}`}>
-        <img src="/ganesh-portfolio/images/profile.jpg" alt="Artist" className="profile-pic" />
+        <img src="/ganesh-portfolio/images/profile.jpeg" alt="Artist" className="profile-pic" />
         <h2 className="artist-name">GANESH CHAVAN</h2>
         <p className="description">
           Creative and skilled artist with 9 years of experience in crafting and
@@ -79,17 +79,27 @@ const Sidebar = () => {
           <ul className="nav-links">
             <li>
               <Link to="/" onClick={closeSidebar}>
-                About
-              </Link>
-            </li>
-            <li>
-              <Link to="/portfolio" onClick={closeSidebar}>
-                Portfolio
+                ABOUT
               </Link>
             </li>
             <li>
               <Link to="/awards" onClick={closeSidebar}>
-                Awards
+                AWARDS
+              </Link>
+            </li>
+            <li>
+              <Link to="/portfolio" onClick={closeSidebar}>
+                PORTRAIT
+              </Link>
+            </li>
+            <li>
+              <Link to="/figure" onClick={closeSidebar}>
+                LIFE FIGURE
+              </Link>
+            </li>
+            <li>
+              <Link to="/relief" onClick={closeSidebar}>
+                RELIEF WORK
               </Link>
             </li>
           </ul>

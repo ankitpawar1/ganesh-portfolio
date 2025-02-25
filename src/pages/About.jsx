@@ -3,7 +3,7 @@ import "../assets/css/styles.css";
 
 const About = () => (
   <section className="about-section">
-    <h1>About</h1>
+    <h1>ABOUT</h1>
     <p>
       A creative and skilled sculpture artist with nine years of experience in
       crafting three-dimensional artworks, proficient in working with clay,
@@ -22,7 +22,7 @@ const About = () => (
       a dedicated studio practice, fostering creativity, technical expertise,
       and professional relationships.
     </p>
-    <h1>Skills</h1>
+    <h1>SKILLS</h1>
     <div className="skills-container">
       {[
         "Clay Work",
